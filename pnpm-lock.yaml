@@ -45,6 +45,9 @@ devDependencies:
   eslint:
     specifier: ^8.35.0
     version: 8.35.0
+  git-cz:
+    specifier: ^4.9.0
+    version: 4.9.0
   rimraf:
     specifier: ^4.3.0
     version: 4.3.0
@@ -2001,6 +2004,11 @@ packages:
   /get-tsconfig@4.4.0:
     resolution: {integrity: sha512-0Gdjo/9+FzsYhXCEFueo2aY1z1tpXrxWZzP7k8ul9qt1U5o8rYJwTJYmaeHdrVosYIVYkOy2iwCJ9FdpocJhPQ==}
     dev: false
+
+  /git-cz@4.9.0:
+    resolution: {integrity: sha512-cSRL8IIOXU7UFLdbziCYqg8f8InwLwqHezkiRHNSph7oZqGv0togId1kMTfKil6gzK0VaSXeVBb4oDl0fQCHiw==}
+    hasBin: true
+    dev: true
 
   /glob-parent@5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
