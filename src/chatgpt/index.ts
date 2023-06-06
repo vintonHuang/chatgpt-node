@@ -107,14 +107,14 @@ async function chatReplyProcess(options: RequestOptions) {
       },
     })
 
-    return sendResponse({ type: 'Success', data: response })
+    return sendResponse({ type: 200, data: response })
   }
   catch (error: any) {
     const code = error.statusCode
     global.console.log(error)
     if (Reflect.has(ErrorCodeMessage, code))
-      return sendResponse({ type: 'Fail', message: ErrorCodeMessage[code] })
-    return sendResponse({ type: 'Fail', message: error.message ?? 'Please check the back-end console' })
+      return sendResponse({ type: 400, message: ErrorCodeMessage[code] })
+    return sendResponse({ type: 400, message: error.message ?? 'Please check the back-end console' })
   }
 }
 
@@ -176,7 +176,7 @@ async function chatConfig() {
     ? (`${process.env.SOCKS_PROXY_HOST}:${process.env.SOCKS_PROXY_PORT}`)
     : '-'
   return sendResponse<ModelConfig>({
-    type: 'Success',
+    type: 200,
     data: { apiModel, reverseProxy, timeoutMs, socksProxy, httpsProxy, usage },
   })
 }

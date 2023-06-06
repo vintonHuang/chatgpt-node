@@ -1,11 +1,16 @@
+/*
+ * @Author: Vinton
+ * @Date: 2023-05-31 11:10:31
+ * @Description: file content
+ */
 interface SendResponseOptions<T = any> {
-  type: 'Success' | 'Fail'
+  type: 200 | 400
   message?: string
   data?: T
 }
 
 export function sendResponse<T>(options: SendResponseOptions<T>) {
-  if (options.type === 'Success') {
+  if (options.type === 200) {
     return Promise.resolve({
       message: options.message ?? null,
       data: options.data ?? null,
@@ -15,7 +20,7 @@ export function sendResponse<T>(options: SendResponseOptions<T>) {
 
   // eslint-disable-next-line prefer-promise-reject-errors
   return Promise.reject({
-    message: options.message ?? 'Failed',
+    message: options.message ?? 400,
     data: options.data ?? null,
     status: options.type,
   })
