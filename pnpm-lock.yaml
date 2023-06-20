@@ -7,6 +7,9 @@ dependencies:
   chatgpt:
     specifier: ^5.1.2
     version: 5.1.2
+  dayjs:
+    specifier: ^1.11.8
+    version: 1.11.8
   dotenv:
     specifier: ^16.0.3
     version: 16.0.3
@@ -25,6 +28,9 @@ dependencies:
   isomorphic-fetch:
     specifier: ^3.0.0
     version: 3.0.0
+  jwt-decode:
+    specifier: ^3.1.2
+    version: 3.1.2
   node-fetch:
     specifier: ^3.3.0
     version: 3.3.0
@@ -1073,6 +1079,10 @@ packages:
   /data-uri-to-buffer@4.0.1:
     resolution: {integrity: sha512-0R9ikRb668HB7QDxT1vkpuUBtqc53YyAwMwGeUFKRojY/NWKvdZ+9UYtRfGmhqNbRkTSVpMbmyhXipFFv2cb/A==}
     engines: {node: '>= 12'}
+    dev: false
+
+  /dayjs@1.11.8:
+    resolution: {integrity: sha512-LcgxzFoWMEPO7ggRv1Y2N31hUf2R0Vj7fuy/m+Bg1K8rr+KAs1AEy4y9jd5DXe8pbHgX+srkHNS7TH6Q6ZhYeQ==}
     dev: false
 
   /debounce-fn@5.1.2:
@@ -2478,6 +2488,10 @@ packages:
       espree: 9.4.1
       semver: 7.3.8
     dev: true
+
+  /jwt-decode@3.1.2:
+    resolution: {integrity: sha512-UfpWE/VZn0iP50d8cz9NrZLM9lSWhcJ+0Gt/nm4by88UL+J1SiKN8/5dkjMmbEzwL2CAe+67GsegCbIKtbp75A==}
+    dev: false
 
   /keyv@4.5.2:
     resolution: {integrity: sha512-5MHbFaKn8cNSmVW7BYnijeAVlE4cYA/SVkifVgrh7yotnfhKmjuXpDKjrABLnT0SfHWV21P8ow07OGfRrNDg8g==}

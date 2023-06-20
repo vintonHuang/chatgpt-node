@@ -1,3 +1,8 @@
+/*
+ * @Author: Vinton
+ * @Date: 2023-05-31 11:10:31
+ * @Description: file content
+ */
 import type { FetchFn } from 'chatgpt'
 
 export interface RequestProps {
@@ -29,6 +34,23 @@ export interface ModelConfig {
   socksProxy?: string
   httpsProxy?: string
   usage?: string
+  accessTokenExpirationTime?: string
+}
+export interface JWT {
+  'https://api.openai.com/profile': {
+    'email': string
+    'email_verified': boolean
+  }
+  'https://api.openai.com/auth': {
+    'user_id': string
+  }
+  'iss': string
+  'sub': string
+  'aud': []
+  'iat': number
+  'exp': number
+  'azp': string
+  'scope': string
 }
 
 export type ApiModel = 'ChatGPTAPI' | 'ChatGPTUnofficialProxyAPI' | undefined
