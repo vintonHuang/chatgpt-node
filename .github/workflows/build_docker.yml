@@ -20,7 +20,7 @@ jobs:
       - name: Install and Build
         run: |
           pnpm install
-          pnpm run build:pro
+          pnpm run build
       - name: Log in to Docker Hub # 登陆腾讯云docker 镜像仓库
         uses: docker/login-action@v2
         with:
